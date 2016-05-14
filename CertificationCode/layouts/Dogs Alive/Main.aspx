@@ -22,28 +22,28 @@
     <sc:VisitorIdentification runat="server" />
   </head>
   <body>
-  <form method="post" runat="server" id="mainform">
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Dogs Alive</a>
+    <form method="post" runat="server" id="mainform">
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Dogs Alive</a>
+            </div>
+		
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Donate <span class="sr-only">(current)</span></a></li>
+                <li><a href="#">Adopt</a></li>
+                <li><a href="#">Volunteer</a></li>
+		
+                <li><a href="#">Learn</a></li>
+            </ul>
         </div>
-		
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Donate <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Adopt</a></li>
-		<li><a href="#">Volunteer</a></li>
-		
-								<li><a href="#">Learn</a></li>
-	</ul>
-	</div>
         
       </div>
     </nav>
@@ -51,6 +51,7 @@
       <div class="section-detail section">
           <div class="container">
               <!-- YOUR COMPONENTS HERE -->
+              <sc:Placeholder runat="server" Key="pagebody"/>
           </div>
           
           <footer>
