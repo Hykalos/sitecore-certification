@@ -1,4 +1,8 @@
 ﻿using System.Collections.Generic;
+using CertificationCode.Models;
+using Sitecore.ContentSearch;
+using Sitecore.ContentSearch.Linq;
+using System.Linq;
 
 namespace CertificationCode.layouts.Dogs_Alive
 {
@@ -11,9 +15,24 @@ namespace CertificationCode.layouts.Dogs_Alive
             // Put user code to initialize the page here
         }
 
-        public IEnumerable<Sitecore.Data.Items.Item> rpSubnavigation_GetData()
+        public IEnumerable<Pet> rpSubnavigation_GetData()
         {
-            return Sitecore.Context.Item.GetChildren();
+            string indexName = $"sitecore_{Sitecore.Context.Database.Name.ToLower()}_index";
+            ISearchIndex index = ContentSearchManager.GetIndex(indexName);
+
+            using (var context = index.CreateSearchContext())
+            {
+                var querable = context.GetQueryable<Pet>().Where(x => x.Paths.Contains(Sitecore.Context.Item.ID) && x.TemplateName.Equals("Pet")).OrderBy(x => x.CreatedDate);
+
+                var results = querable.GetResults();
+
+                if (results.Hits.Any())
+                {
+                    return results.Hits.Select(x => x.Document).ToList();
+                }
+            }
+
+            return new List<Pet>();
         } 
     }
 }

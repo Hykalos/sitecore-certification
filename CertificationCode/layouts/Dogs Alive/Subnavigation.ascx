@@ -2,7 +2,7 @@
 <%@ Import Namespace="Sitecore.Links" %>
 <%@ Register TagPrefix="sc" Namespace="Sitecore.Web.UI.WebControls" Assembly="Sitecore.Kernel" %>
 
-<asp:Repeater ID="rpSubnavigation" ItemType="Sitecore.Data.Items.Item" runat="server" SelectMethod="rpSubnavigation_GetData">
+<asp:Repeater ID="rpSubnavigation" ItemType="CertificationCode.Models.Pet" runat="server" SelectMethod="rpSubnavigation_GetData">
     <HeaderTemplate>
         <ul class="media-list pets">
     </HeaderTemplate>
@@ -10,13 +10,12 @@
     <ItemTemplate>
         <li class="media">
             <div class="media-body">
-                <a href="<%#: LinkManager.GetItemUrl(Item) %>">
+                <a href="<%#: Item.Url %>">
                     <h2 class="media-heading">
-                        <%#: Item.Name %>
+                        <%#: Item.MainHeading %>
                     </h2>
                 </a>
-                
-                <p>Adopt this animal - give us a call on 000-000-0000</p>
+                <%#: Item.MainSummary %>
             </div>
         </li>
     </ItemTemplate>
