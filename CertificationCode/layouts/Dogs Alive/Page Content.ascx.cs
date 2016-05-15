@@ -1,4 +1,6 @@
-﻿namespace CertificationCode.layouts.Dogs_Alive
+﻿using System.Collections.Specialized;
+
+namespace CertificationCode.layouts.Dogs_Alive
 {
     using System;
 
@@ -8,12 +10,20 @@
         {
             // Put user code to initialize the page here
 
-            var datasource = Attributes["sc_datasource"];
+            string datasource = Attributes["sc_datasource"];
 
             if (!String.IsNullOrEmpty(datasource))
             {
                 MainHeading.DataSource = MainImage.DataSource = MainText.DataSource = datasource;
             }
+
+            string rawParameters = Attributes["sc_parameters"];
+
+            NameValueCollection parameters = Sitecore.Web.WebUtil.ParseUrlParameters(rawParameters);
+
+            this.Colour = parameters["Colour"];
         }
+
+        public string Colour { get; set; }
     }
 }

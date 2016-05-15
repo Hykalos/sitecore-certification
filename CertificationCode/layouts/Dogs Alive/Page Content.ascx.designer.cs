@@ -38,5 +38,14 @@ namespace CertificationCode.layouts.Dogs_Alive {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::Sitecore.Web.UI.WebControls.Text MainText;
+        
+        /// <summary>
+        /// EditFrame1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Sitecore.Web.UI.WebControls.EditFrame EditFrame1;
     }
 }
