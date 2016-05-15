@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="layouts\Dogs Alive\Comments Form.ascx" />
+    <Content Include="layouts\Dogs Alive\Comments List.ascx" />
     <Content Include="layouts\Dogs Alive\Page Content.ascx" />
     <Content Include="layouts\Dogs Alive\Subnavigation.ascx" />
     <Content Include="layouts\Dogs Alive\Two Columns.ascx" />
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="layouts\Dogs Alive\Comments Form.ascx.designer.cs">
       <DependentUpon>Comments Form.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Comments List.ascx.cs">
+      <DependentUpon>Comments List.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Comments List.ascx.designer.cs">
+      <DependentUpon>Comments List.ascx</DependentUpon>
     </Compile>
     <Compile Include="layouts\Dogs Alive\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>

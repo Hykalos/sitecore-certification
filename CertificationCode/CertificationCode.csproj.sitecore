@@ -2,4 +2,13 @@
   <PropertyGroup>
     <Site Server="Sitecore" UserName="sitecore\admin" IsRemoteSitecore="False" />
   </PropertyGroup>
+  <File Include="layouts\Dogs Alive\Subnavigation.ascx" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{622DB942-7CB9-47D6-A1CB-CB08A0BC7F5D}</Item>
+  </File>
+  <File Include="layouts\Dogs Alive\Comments Form.ascx" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{836CE603-DBA4-4379-A8F9-C2F0BE9EF7A8}</Item>
+  </File>
+  <File Include="layouts\Dogs Alive\Comments List.ascx" FileTimestamp="0" FileSize="0" ServerTimestamp="0" ServerFileSize="0">
+    <Item DatabaseName="master">{3FA20290-3B62-44F8-AB90-AFAC348BE1CC}</Item>
+  </File>
 </Project>

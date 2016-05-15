@@ -1,5 +1,6 @@
 ﻿using Sitecore;
 using Sitecore.Data;
+using Sitecore.Data.Fields;
 using Sitecore.Data.Items;
 using Sitecore.SecurityModel;
 
@@ -31,6 +32,12 @@ namespace CertificationCode.layouts.Dogs_Alive
 
                     newComment.Fields["Comment Author"].Value = txtAuthor.Text;
                     newComment.Fields["Comment Text"].Value = txtContent.Text;
+
+                    LinkField link = newComment.Fields["Comment Author Website"];
+                    link.Url = txtLink.Text;
+                    link.Text = txtLink.Text;
+                    link.Target = "_blank";
+                    link.LinkType = "external";
 
                     newComment.Editing.EndEdit();
                 }
