@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="layouts\Dogs Alive\Page Content.ascx" />
+    <Content Include="layouts\Dogs Alive\Subnavigation.ascx" />
     <Content Include="layouts\Dogs Alive\Two Columns.ascx" />
     <Content Include="packages.config" />
   </ItemGroup>
@@ -104,6 +105,13 @@
     </Compile>
     <Compile Include="layouts\Dogs Alive\Page Content.ascx.designer.cs">
       <DependentUpon>Page Content.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Subnavigation.ascx.cs">
+      <DependentUpon>Subnavigation.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Subnavigation.ascx.designer.cs">
+      <DependentUpon>Subnavigation.ascx</DependentUpon>
     </Compile>
     <Compile Include="layouts\Dogs Alive\Two Columns.ascx.cs">
       <DependentUpon>Two Columns.ascx</DependentUpon>
