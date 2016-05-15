@@ -71,6 +71,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="layouts\Dogs Alive\Comments Form.ascx" />
     <Content Include="layouts\Dogs Alive\Page Content.ascx" />
     <Content Include="layouts\Dogs Alive\Subnavigation.ascx" />
     <Content Include="layouts\Dogs Alive\Two Columns.ascx" />
@@ -91,6 +92,13 @@
   <ItemGroup>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Comments Form.ascx.cs">
+      <DependentUpon>Comments Form.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="layouts\Dogs Alive\Comments Form.ascx.designer.cs">
+      <DependentUpon>Comments Form.ascx</DependentUpon>
     </Compile>
     <Compile Include="layouts\Dogs Alive\Main.aspx.cs">
       <DependentUpon>Main.aspx</DependentUpon>
